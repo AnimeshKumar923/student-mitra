@@ -10,9 +10,10 @@ function App() {
 
   return (
     <div>
-    <HomepageLayout /> {}
+    <div className='w-full h-screen bg-zinc-900'></div>
+    <HomepageLayout />
   </div>
   )
 }
 
-export default App
+export default App;
