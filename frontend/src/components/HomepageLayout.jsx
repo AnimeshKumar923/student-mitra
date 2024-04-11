@@ -32,7 +32,7 @@ const { MediaContextProvider, Media } = createMedia({
  * components for such things.
  */
 const HomepageHeading = ({ mobile }) => (
-  <Container text>
+  <Container text className=''>
     <Header
       as='h1'
       content='StudentMitra'
@@ -54,9 +54,11 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    <Button primary size='huge'>
+    <Button primary size='huge'
+      className='mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
       Get Started
-      <Icon name='right arrow' />
+      <Icon name='right arrow' 
+      className=''/>
     </Button>
   </Container>
 )
@@ -95,14 +97,18 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-                <Menu.Item as='a' active>
+                <Menu.Item as='a' active
+                className='mt-4 bg-blue-500 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
                   Home
                 </Menu.Item>
-                <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
+                <Menu.Item position='right'
+                className='mt-9'>
+                  <Button as='a' inverted={!fixed}
+                  className='mt-4 bg-blue-500 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
                     Log in
                   </Button>
-                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}
+                  className='mt-4 bg-blue-500 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
                     Sign Up
                   </Button>
                 </Menu.Item>
@@ -213,7 +219,7 @@ const HomepageLayout = () => (
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              We Help Companies and Companions
+              Bridging the alumni connection gap
             </Header>
             <p style={{ fontSize: '1.33em' }}>
               We can give your company superpowers to do things that they never thought possible.
