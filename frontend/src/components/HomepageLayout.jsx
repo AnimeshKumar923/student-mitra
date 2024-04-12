@@ -98,17 +98,17 @@ class DesktopContainer extends Component {
             >
               <Container>
                 <Menu.Item as='a' active
-                className='mt-4 bg-blue-500 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
+                className='mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
                   Home
                 </Menu.Item>
                 <Menu.Item position='right'
                 className='mt-9'>
                   <Button as='a' inverted={!fixed}
-                  className='mt-4 bg-blue-500 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
+                  className='mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
                     Log in
                   </Button>
                   <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}
-                  className='mt-4 bg-blue-500 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
+                  className='mt-4 bg-fuchsia-500 hover:bg-fuchsia-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
                     Sign Up
                   </Button>
                 </Menu.Item>
@@ -219,18 +219,15 @@ const HomepageLayout = () => (
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              Bridging the alumni connection gap
+              Bridging the gap between students, alumni, and expers
             </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              We can give your company superpowers to do things that they never thought possible.
-              Let us delight your customers and empower your needs... through pure data analytics.
+            <p style={{ fontSize: '1.33em' }}
+            className='mt-5'>
+            Our goal is to facilitate connections and knowledge-sharing through our innovative Q&A portal. Here, students can ask questions and seek advice from alumni who have walked the same educational path and industry experts with valuable insights. 
             </p>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              We Make Bananas That Can Dance
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-              bioengineered.
+            <p style={{ fontSize: '1.33em' }}
+            className='mt-5'>
+            Alumni can engage with current students, offering mentorship and guidance based on their experiences. Meanwhile, experts from diverse fields can contribute their expertise and interact directly with the next generation of professionals.
             </p>
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
@@ -238,9 +235,9 @@ const HomepageLayout = () => (
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-          <Grid.Column textAlign='center'>
+          {/* <Grid.Column textAlign='center'>
             <Button size='huge'>Check Them Out</Button>
-          </Grid.Column>
+          </Grid.Column> */}
         </Grid.Row>
       </Grid>
     </Segment>
@@ -249,7 +246,7 @@ const HomepageLayout = () => (
       <Grid celled='internally' columns='equal' stackable>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
+            {/* <Header as='h3' style={{ fontSize: '2em' }}>
               "What a Company"
             </Header>
             <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
@@ -261,7 +258,7 @@ const HomepageLayout = () => (
             <p style={{ fontSize: '1.33em' }}>
               <Image avatar src='/images/avatar/large/nan.jpg' />
               <b>Nan</b> Chief Fun Officer Acme Toys
-            </p>
+            </p> */}
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -269,7 +266,7 @@ const HomepageLayout = () => (
 
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Container text>
-        <Header as='h3' style={{ fontSize: '2em' }}>
+        {/* <Header as='h3' style={{ fontSize: '2em' }}>
           Breaking The Grid, Grabs Your Attention
         </Header>
         <p style={{ fontSize: '1.33em' }}>
@@ -300,11 +297,11 @@ const HomepageLayout = () => (
         </p>
         <Button as='a' size='large'>
           I'm Still Quite Interested
-        </Button>
+        </Button> */}
       </Container>
     </Segment>
 
-    <Segment inverted vertical style={{ padding: '5em 0em' }}>
+    {/* <Segment inverted vertical style={{ padding: '5em 0em' }}>
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
@@ -337,7 +334,7 @@ const HomepageLayout = () => (
           </Grid.Row>
         </Grid>
       </Container>
-    </Segment>
+    </Segment> */}
   </ResponsiveContainer>
 )
 
