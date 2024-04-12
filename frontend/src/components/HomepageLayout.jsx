@@ -43,6 +43,7 @@ const HomepageHeading = ({ mobile }) => (
         marginBottom: 0,
         marginTop: mobile ? '1.5em' : '3em',
       }}
+      className='text-white'
     />
     <Header
       as='h2'
@@ -53,6 +54,7 @@ const HomepageHeading = ({ mobile }) => (
         fontWeight: 'normal',
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
+      className='text-white'
     />
     <Button primary size='huge'
       className='mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
@@ -88,6 +90,7 @@ class DesktopContainer extends Component {
             textAlign='center'
             style={{ minHeight: 700, padding: '1em 0em' }}
             vertical
+            className='w-full h-screen bg-rose-600'
           >
             <Menu
               fixed={fixed ? 'top' : null}
@@ -96,19 +99,20 @@ class DesktopContainer extends Component {
               secondary={!fixed}
               size='large'
             >
-              <Container>
+              <Container
+              className='mt-3'>
                 <Menu.Item as='a' active
-                className='mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
+                className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
                   Home
                 </Menu.Item>
                 <Menu.Item position='right'
-                className='mt-9'>
+                className='mt-6'>
                   <Button as='a' inverted={!fixed}
-                  className='mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
+                  className='bg-slate-300 hover:bg-slate-400 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
                     Log in
                   </Button>
                   <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}
-                  className='mt-4 bg-fuchsia-500 hover:bg-fuchsia-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
+                  className='mt-4 bg-stone-800 hover:bg-stone-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'>
                     Sign Up
                   </Button>
                 </Menu.Item>
@@ -214,24 +218,27 @@ ResponsiveContainer.propTypes = {
 
 const HomepageLayout = () => (
   <ResponsiveContainer>
-    <Segment style={{ padding: '8em 0em' }} vertical>
+    <Segment style={{ padding: '8em 0em' }} vertical
+    className='w-full h-screen bg-red-100'>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column width={8}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              Bridging the gap between students, alumni, and expers
+            <Header as='h3' style={{ fontSize: '2em' }}
+            className='ml-20 italic'>
+              Bridging the gap between students, alumni, and experts
             </Header>
             <p style={{ fontSize: '1.33em' }}
-            className='mt-5'>
+            className='mt-5 ml-20 italic'>
             Our goal is to facilitate connections and knowledge-sharing through our innovative Q&A portal. Here, students can ask questions and seek advice from alumni who have walked the same educational path and industry experts with valuable insights. 
             </p>
             <p style={{ fontSize: '1.33em' }}
-            className='mt-5'>
+            className='mt-5 ml-20 italic'>
             Alumni can engage with current students, offering mentorship and guidance based on their experiences. Meanwhile, experts from diverse fields can contribute their expertise and interact directly with the next generation of professionals.
             </p>
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+            <Image bordered rounded  src='src/assets/network-image.jpeg' 
+            className='ml-40 mt-20 border-8 border-cyan-400 rounded-3xl object-cover h-80 w-90'/>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
