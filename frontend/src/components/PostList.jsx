@@ -8,7 +8,8 @@ const PostList = () => {
   ];
 
   return (
-    <div>
+    <div
+    className='text-lime-100'>
       {posts.map((post) => (
         <Post key={post.id} post={post} />
       ))}
