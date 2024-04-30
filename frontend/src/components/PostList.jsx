@@ -30,6 +30,12 @@ const PostList = () => {
     setNewCommentText('');
   };
 
+  const handleClearComments = () => {
+    // Clear all comments
+    setComments({});
+  };
+
+
   return (
     <div className="text-lime-900">
       {posts.map((post) => (
@@ -48,11 +54,18 @@ const PostList = () => {
             ></textarea>
             <button
               onClick={() => handleAddComment(post.id)}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2"
+              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-2"
             >
               Add Comment
             </button>
           </div>
+
+            {/* Clear Comments Button */}
+            <button
+            onClick={handleClearComments}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute top-0 right-0 mt-2">
+            Clear Comments
+          </button>
 
           {/* Display Comments for the current post */}
           {comments[post.id] && (
@@ -64,6 +77,8 @@ const PostList = () => {
                 </div>
               ))}
             </div>
+
+            
           )}
         </div>
       ))}
